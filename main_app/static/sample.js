@@ -17,20 +17,19 @@ color_dictionary = [
 
 document.addEventListener('DOMContentLoaded', function() {
 
-    bgcolor = color_dictionary.slice(0,values.length)
-    var ctx1 = document.getElementById("pieChart").getContext('2d');
-    var pieChart = new Chart(ctx1, {
+    var ctx3 = document.getElementById("samplePieChart").getContext('2d');
+    var pieChart = new Chart(ctx3, {
       type: 'pie',
       data: {
-        labels: labels,
+        labels: ['happy', 'sad', 'disgusted', 'depressed', 'excited', 'surprised'],
         datasets: [{
-          backgroundColor: bgcolor,
-          data: values
+          backgroundColor: color_dictionary.slice(0,6),
+          data: [15, 4, 1, 1, 7, 3]
         }]
       }
     });
 
-    var ctx2 = document.getElementById("barChart").getContext('2d');
+    var ctx4 = document.getElementById("sampleBarChart").getContext('2d');
     var options = {
         scales: {
             xAxes: [{
@@ -50,21 +49,19 @@ document.addEventListener('DOMContentLoaded', function() {
             }]
         }
     }
-    var barChart = new Chart(ctx2, {
+    var barChart = new Chart(ctx4, {
       type: 'bar',
       data: {
-        labels: labels,
+        labels: ['happy', 'sad', 'disgusted', 'depressed', 'excited', 'surprised'],
         datasets: [{
-          label: 'mood summary',
-          backgroundColor: bgcolor,
-          data: values
+          label: 'mood',
+          backgroundColor: color_dictionary.slice(0,6),
+          data: [15, 4, 1, 1, 7, 3]
         }]
       },
       options: options
 
     });
-
-
 
 
 })
