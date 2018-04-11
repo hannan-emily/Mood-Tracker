@@ -134,6 +134,7 @@ a {
 	color: white;
 }
 
+
 .index-row-text-small {
 	font-family: 'Playfair Display', serif !important;
 	font-weight: 700 !important;
@@ -292,6 +293,23 @@ button.slick-next:before, button.slick-prev:before {
 }
 
 /* styling for sample page */
+.sample-header {
+	margin: 1% 0 2% 0;
+	height: 100%;
+}
+
+.sample-header-text-h1 {
+	font-family: 'Playfair Display', serif !important;
+	font-weight: 700 !important;
+	font-size: 5em;
+}
+
+.sample-header-text-h2 {
+	font-family: 'Playfair Display', serif !important;
+	font-weight: 400 !important;
+	font-size: 5em;
+}
+
 .inline {
 	display: inline;
 }
@@ -311,10 +329,25 @@ button.slick-next:before, button.slick-prev:before {
 	z-index: 20;
 }
 
+.index-placeholder {
+	height: 100% !important;
+	width: 100% !important;
+	position: relative;
+	z-index: 20;
+}
+
+
 .index-overlay-text {
 	position: absolute;
 	z-index: 100;
 	top: 40%;
 	font-size: 2.5em;
 	text-align: center !important;
+}
+
+.slide-emoji-margin {
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	margin: 5% 0 0 0;
 }
