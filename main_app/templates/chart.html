@@ -2,15 +2,28 @@
 
 
 {% block content %}
-	<h3>
-		{{ graph_labels }}
-		{{ graph_values }}
-	</h3>
+
+<div class="row">
+	<div class="col s1"></div>
+	<div class="col s4">
+		 <canvas id="pieChart" width="400" height="400"></canvas>
+	</div>
+	<div class="col s1"></div>
+	<div class="col s4">
+		<canvas id="barChart" width="400" height="400"></canvas>
+	</div>
+	<div class="col s1"></div>
+</div>
+
+
+
+
 	
- <canvas id="myChart" width="400" height="400"></canvas>
-	<script> 
-		labels ={{graph_labels|safe}}
-        values ={{graph_values|safe}}
-    </script>
+
+
+<script> 
+	labels ={{graph_labels|safe}}
+    values ={{graph_values|safe}}
+</script>
 
 {% endblock %}
