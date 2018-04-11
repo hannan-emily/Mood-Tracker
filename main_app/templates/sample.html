@@ -8,68 +8,59 @@
 
   <!-- title section -->
   <div class="col s12 center">
-    <h1>Combining Facial Recognition AI + Data Visualizion</h1>
-    <h1>Mood Tracker</h1>
-    <h1>Personalized Selfie/Photo Analysis & Charting Tracker</h1>
+    <p>Combining Facial Recognition AI + Data Visualizion</p>
+    <p>Mood Tracker</p>
+    <p>Personalized Selfie/Photo Analysis & Charting Tracker</p>
     <p>Utilizes:</p>
-      <ul>Amazon Rekognition: Deep Learning API
+      <p>Amazon Rekognition: Deep Learning API</p>
+      <p>Chart.js</p>
   </div>
 
 
-  <!-- upload section -->
-  <div class="row image-upload-row">
+  <!-- image upload example -->
+  <div class="row">
+    <div class="col s12 center">
+      <h5>Upload Image to Calculate Mood</h5>
+      <h6>Jessica's Sample</h6>
+    </div>
 
-      <div class="col s12 image-form">
-          <h5>Upload Image to Calculate Mood</h5>
-          <form method="post" id="emily" enctype='multipart/form-data'>
-           	 {% csrf_token %}
-           	   <div>{{ form.as_p }}</div>
-            <button class="submit-button" type="submit">Upload</button>
-          </form>
-      </div>
+    <div class="col s12 m6 center">
+      <img class="responsive-image" src="../static/img/cover-jessica-smile.jpg" alt="jessica-smile" />
+    </div>
 
-      <div class="col s12">
-        <div class="col s12 m4 placeholder">
-          {% if result != 'Unknown' %}
-            <div id="ItemPreview" class="slide-text">
-              <h2>Your photo's Mood Tracker Score:<h2>
-              <h2>{{ result }}</h2>
-            </div>
-          {% else %}
-            <img class="responsive-image placeholder-img" src="../static/img/woman02.jpg" alt="woman" />
-          {% endif %}
-        </div>
+    <div class="col s12 m5">
+      <h2>Your photo's Mood Tracker Score:</h2>
+      <h2>HAPPY	&nbsp;&nbsp;<img class="slide-emoji" src="../static/img/icon-happy.png" alt=""/></h2>
 
-        <div class="col s12 m4 image-upload-parent placeholder">
-          {% if img %}
-            <img class="responsive-image placeholder-img" src="{{img}}" />
-          {% else %}
-            <img class="responsive-image placeholder-img" src="../static/img/woman01.jpg" alt="woman" />
-          {% endif %}
-        </div>
+      <p>explanation of what the Amazon Reckognition API is doing, what data is returned,
+        how it calculaes the mood score, how we upload/download</p>
 
-        <div class="col s12 m4 placeholder">
-          {% if result == 'HAPPY' %}
-            <img class="responsive-image placeholder-img " src="../static/img/happy.jpg" alt="woman" />
-          {% elif result == 'SAD' %}
-            <img class="responsive-image placeholder-img" src="../static/img/sad.jpg" alt="woman" />
-          {% elif result == 'ANGRY' %}
-            <img class="responsive-image placeholder-img" src="../static/img/angry.jpg" alt="woman" />
-          {% elif result == 'CONFUSED' %}
-            <img class="responsive-image  placeholder-img" src="../static/img/confused.jpg" alt="woman" />
-          {% elif result == 'DISGUSTED' %}
-            <img class="responsive-image placeholder-img" src="../static/img/disgusted.jpg" alt="woman" />
-          {% elif result == 'SURPRISED' %}
-            <img class="responsive-image  placeholder-img" src="../static/img/surprised.jpg" alt="woman" />
-          {% elif result == 'CALM' %}
-            <img class="responsive-image placeholder-img" src="../static/img/calm.jpg" alt="woman" />
-          {% else %}
-            <img class="responsive-image placeholder-img" src="../static/img/woman03.jpg" alt="woman" />
-          {% endif %}
-        </div>
-      </div>
+      <a class="btn" href="{% url 'motion_result' %}">Start Your Tracker</a>
+
+    </div>
+  </div>
+
+  <div class="row row-grey">
+    <div class="col s8 push-s2 center">
+
+      <h5 class="inline"> PHOTO. ANALYZED. <h4 class="inline">MOOD TRACKER.</h4></h5>
+      <h2 class="h2-quote">"I am big enough to admit that I am often inspired by myself."
+      - Leslie Knope, Parks & Rec</h2>
+
+    </div>
+  </div>
+
+  <!-- sample charts using sample data -->
+  <div class="row">
 
   </div>
+
+  <!-- sample gallery of images -->
+  <div class="row">
+
+  </div>
+
+
 
 </div>
 

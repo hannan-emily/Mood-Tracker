@@ -3,10 +3,6 @@ body {
 	padding: 0;
 }
 
-p {
-	font-family: 'Work Sans', sans-serif !important;
-}
-
 nav {
   background-color: #CBF7E6 !important;
 	font-family: 'Work Sans', sans-serif !important;
@@ -41,6 +37,12 @@ h2 {
 	font-weight: 700 !important;
 }
 
+.h2-quote {
+	font-family: 'Playfair Display', serif !important;
+	font-weight: 700 !important;
+	font-size: 2.5em;
+}
+
 h3 {
 	font-family: 'Work Sans', sans-serif !important;
 	font-weight: 700 !important;
@@ -68,7 +70,14 @@ h6 {
 	font-family: 'Work Sans', sans-serif !important;
 	font-weight: 700 !important;
 	font-size: 2em;
+}
 
+
+
+p {
+	font-family: 'Work Sans', sans-serif !important;
+	font-weight: 400;
+	font-size: 1.2em;
 }
 
 a {
@@ -79,6 +88,14 @@ a {
 	margin: 0 !important;
 	padding: 0 !important;
 }
+
+.row-grey {
+	background-color: #F2F2F2;
+	margin: 2% 0 2% 0;
+	padding: 4% 0 4% 0;
+	height: 100%;
+}
+
 
 /* global materialize class */
 .responsive-img {
@@ -275,3 +292,12 @@ button.slick-next:before, button.slick-prev:before {
 }
 
 /* styling for sample page */
+.inline {
+	display: inline;
+}
+
+
+.inline-header {
+	display: inline;
+	font-size: 1.5em;
+}
