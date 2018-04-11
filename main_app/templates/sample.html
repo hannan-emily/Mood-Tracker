@@ -7,15 +7,45 @@
 <div class="row ">
 
   <!-- title section -->
-  <div class="col s12 center">
-    <p>Combining Facial Recognition AI + Data Visualizion</p>
-    <p>Mood Tracker</p>
-    <p>Personalized Selfie/Photo Analysis & Charting Tracker</p>
-    <p>Utilizes:</p>
-      <p>Amazon Rekognition: Deep Learning API</p>
-      <p>Chart.js</p>
+  <div class="row sample-header">
+    <div class="col m12 center hide-on-small-only">
+        <h2 class="sample-header-text-h2 inline">mood</h2>
+        <h1 class="sample-header-text-h1 inline">tracker</h1>
+        <br />
+        <p class="col m8 push-m2">Upload your selfies and we'll analyze what mood you're in!
+        Upload more photos, and Mood Tracker charts what emotions you display
+        most often, on camera. We use the state-of-the-art Facial Rekongnition
+        machine learning AI from Amazon, then filter each photo by emotion and store
+        your data is securely to generate your personalized mood trackers.</p>
+    </div>
+
+    <div class="col s12 center hide-on-med-and-up">
+      <h2 class="index-row-text-small">mood</h2><h1 class="index-row-text-small-h1">tracker</h1>
+      <p class="col s8 push-s2 flow-text">Upload your selfies and we'll analyze what mood you're in!
+      Upload more photos, and Mood Tracker charts what emotions you display
+      most often, on camera. We use the state-of-the-art Facial Rekongnition
+      machine learning AI from Amazon, then filter each photo by emotion and store
+      your data is securely to generate your personalized mood trackers.</p>
+    </div>
   </div>
 
+  <!-- sample charts using sample data -->
+  <div class="row">
+
+    <div class="col l1 hide-on-med-and-down"></div>
+
+    <div class="col s12 l4">
+       <canvas id="samplePieChart" width="400" height="400"></canvas>
+    </div>
+    <div class="col s12 l1"></div>
+
+    <div class="col s12 l4">
+      <canvas id="sampleBarChart" width="400" height="400"></canvas>
+    </div>
+
+    <div class="col l1 hide-on-med-and-down"></div>
+
+  </div>
 
   <!-- image upload example -->
   <div class="row">
@@ -50,40 +80,113 @@
     </div>
   </div>
 
-  <!-- sample charts using sample data -->
-  <div class="row">
-  	<div class="col s1"></div>
-  	<div class="col s4">
-  		 <canvas id="samplePieChart" width="400" height="400"></canvas>
-  	</div>
-  	<div class="col s1"></div>
-  	<div class="col s4">
-  		<canvas id="sampleBarChart" width="400" height="400"></canvas>
-  	</div>
-  	<div class="col s1"></div>
-  </div>
+
 
   <!-- sample gallery of images -->
   <div class="row">
+
+    <div class="row sample-header">
+      <div class="col s12 center">
+        <h2>Mood Tracker Analysis</h2>
+      </div>
+    </div>
+
     <div class="col s12">
 
-      <div class="col s3 individual-slide">
+      <!-- div: image/text/emoji CALM -->
+      <div class="col s12 l3 individual-slide center">
+        <div class="col s12 index-overlay-text">
+          <h3 class="flow-text">CALM</h3>
+          <img class="slide-emoji" src="../static/img/icon-calm.png" alt=""/>
+        </div>
         <div class="index-overlay">
           <img class="responsive-img" src="../static/img/calm.jpg" alt="calm" />
-          <div class="col s12 slide-text">
-            <h3> CALM </h3>
-            <img class="slide-emoji" src="../static/img/icon-calm.png" alt=""/>
-          </div>
         </div>
       </div>
 
-      <div class="col s3">
+      <!-- div: image/text/emoji HAPPY -->
+      <div class="col s12 l3 individual-slide center">
+        <div class="col s12 index-overlay-text">
+          <h3 class="flow-text">HAPPY</h3>
+          <img class="slide-emoji" src="../static/img/icon-happy.png" alt=""/>
+        </div>
+        <div class="index-overlay">
+          <img class="responsive-img" src="../static/img/happy.jpg" alt="calm" />
+        </div>
       </div>
 
-      <div class="col s3">
+      <!-- div: image/text/emoji SURPRISED -->
+      <div class="col s12 l3 individual-slide center">
+        <div class="col s12 index-overlay-text">
+          <h3 class="flow-text">SURPRISED</h3>
+          <img class="slide-emoji" src="../static/img/icon-surprised.png" alt=""/>
+        </div>
+        <div class="index-overlay">
+          <img class="responsive-img" src="../static/img/surprised.jpg" alt="calm" />
+        </div>
+      </div>
+
+      <!-- div: image/text/emoji ANGRY -->
+      <div class="col s12 l3 individual-slide center">
+        <div class="col s12 index-overlay-text">
+          <h3 class="flow-text">ANGRY</h3>
+          <img class="slide-emoji" src="../static/img/icon-angry.png" alt=""/>
+        </div>
+        <div class="index-overlay">
+          <img class="responsive-img" src="../static/img/angry.jpg" alt="calm" />
+        </div>
+      </div>
+
+      <!-- div: image/text/emoji CONFUSED -->
+      <div class="col s12 l3 individual-slide center">
+        <div class="col s12 index-overlay-text">
+          <h3 class="flow-text">CONFUSED</h3>
+          <img class="slide-emoji" src="../static/img/icon-confused.png" alt=""/>
+        </div>
+        <div class="index-overlay">
+          <img class="responsive-img" src="../static/img/confused.jpg" alt="calm" />
+        </div>
+      </div>
+
+      <!-- div: image/text/emoji SAD -->
+      <div class="col s12 l3 individual-slide center">
+        <div class="col s12 index-overlay-text">
+          <h3 class="flow-text">SAD</h3>
+          <img class="slide-emoji" src="../static/img/icon-sad.png" alt=""/>
+        </div>
+        <div class="index-overlay">
+          <img class="responsive-img" src="../static/img/sad.jpg" alt="" />
+        </div>
+      </div>
+
+      <!-- div: image/text/emoji DISGUSTED -->
+      <div class="col s12 l3 individual-slide center">
+        <div class="col s12 index-overlay-text">
+          <h3 class="flow-text">DISGUSTED</h3>
+          <img class="slide-emoji" src="../static/img/icon-disgusted.png" alt=""/>
+        </div>
+        <div class="index-overlay">
+          <img class="responsive-img" src="../static/img/disgusted.jpg" alt="calm" />
+        </div>
+      </div>
+
+      <!-- div: image/text/emoji START YOUR OWN -->
+      <!-- div is wrapped in a link href tag-->
+      <div class="col s12 l3 individual-slide center">
+        <a href="{% url 'motion_result' %}">
+          <div class="col s12 index-overlay-text">
+            <h3 class="flow-text">CLICK + START YOUR TRACKER</h3>
+            <img class="slide-emoji-margin" src="../static/img/icon-happy.png" alt=""/>
+          </div>
+          <div class="index-placeholder">
+            <img class="responsive-img" src="../static/img/placeholder.png" alt="" />
+          </div>
+        </a>
       </div>
 
     </div>
+
+
   </div>
 
 
