@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+  <h2> Name: {{ cat.name }}</h1>
+  <p> Breed: {{ cat.breed }}</p>
+  <p> Description: {{ cat.description }}</p>
+  <p> Age: {{ cat.age }}</p>
+  <br />
+  
+  <form action="/{{ cat.id }}/toy/create/" method="post">
+  	{% csrf_token %}
+  	{{ form }}
+  	<input type="submit" class="btn red" value="Add Toy">
+  </form>
+
+  <br />
+  <form action="/{{ cat.id }}/destroy/" method='post'>
+  	{% csrf_token %}
+  	<input type="submit" class="btn red" value="Destroy">
+  </form>
+
+{% endblock %}

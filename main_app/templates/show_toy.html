@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+  <h2>Toy: {{ toy.name }}</h2>
+
+  <p> Cats: </p>
+  <ul>
+    {% for cat in cats %}
+      <li>
+        <a href="/{{ cat.id }}">{{ cat.name }}</a>
+      </li>
+      {% endfor%}
+  </ul>
+
+{% endblock %}

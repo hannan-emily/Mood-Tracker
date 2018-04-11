@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+  <ul>
+    {% for picture in pictures %}
+      <li>
+      	<h1>{{ picture.mood }}</h1>
+      	<h2>{{ picture.timestamp}}</h2>
+      	<img src="{{picture.img}}">
+
+      </li>
+      {% endfor%}
+  </ul>
+
+{% endblock %}

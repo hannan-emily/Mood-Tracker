@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+  <div class="row ">
+
+    <div class="col s12">
+      <h2>Your Gallery</h2>
+    </div>
+
+    <div class="col offset-s1 s10">
+      <div class="responsive slide-parent">
+
+      {% for picture in pictures %}
+        <div class='col s12 slide individual-slide'>
+
+          <div class="individual-overlay"></div>
+            <img class="responsive-image" src="{{picture.img}}" alt=""/>
+            <div class="col s12 slide-text">
+              <h3> {{ picture.mood }} </h3>
+              {% if picture.mood == 'HAPPY' %}
+              <img class="slide-emoji" src="../static/img/icon-happy.png" alt=""/>
+              {% elif picture.mood == 'SAD' %}
+                <img class="slide-emoji" src="../static/img/icon-sad.png" alt=""/>
+              {% elif picture.mood == 'ANGRY' %}
+                <img class="slide-emoji" src="../static/img/icon-angry.png" alt=""/>
+              {% elif picture.mood == 'CONFUSED' %}
+                <img class="slide-emoji" src="../static/img/icon-confused.png" alt=""/>
+              {% elif picture.mood == 'DISGUSTED' %}
+                <img class="slide-emoji" src="../static/img/icon-disgusted.png" alt=""/>
+              {% elif picture.mood == 'SURPRISED' %}
+                <img class="slide-emoji" src="../static/img/icon-surprised.png" alt=""/>
+              {% elif picture.mood == 'CALM' %}
+                <img class="slide-emoji" src="../static/img/icon-calm.png" alt=""/>
+              {% else %}
+                <div><div>
+              {% endif %}
+            </div>
+        </div>
+        <a class="button js-remove-slide">Remove Slide</a>
+        <!-- <a href="{% picture.id %}" class="btn js-remove-slide">Remove Slide</a> -->
+      {% endfor%}
+
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

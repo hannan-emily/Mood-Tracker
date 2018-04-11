@@ -1,0 +1,74 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CatCollectr</title>
+
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
+
+    <!-- CSS file for Slick.io carousel -->
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'slick.css' %}"/> -->
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'slick-theme.css' %}"/>  -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/> -->
+
+    <!-- CSS file for Materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+
+  </head>
+
+  <header>
+    <nav class="nav-center">
+      <div class="nav-wrapper">
+        {% if user.is_authenticated %}
+        <ul id="nav-mobile" class="hide-on-med-and-down">
+          <li><a  href="{% url 'profile' user.username %}">Hello, {{ user.username }}!</a></li>
+          <li><a href="{% url 'motion_result' %}">Test Your Photo</a></li>
+          <li><a href="{% url 'gallery' %}">Mood Gallery</a></li>
+          <li><a href="{% url 'sample' %}">Sample Tracker</a></li>
+          <li><a href="{% url 'logout' %}">Logout</a></li>
+        </ul>
+        {% else %}
+        <ul id="nav-mobile" class="hide-on-med-and-down">
+          <li><a href="{% url 'motion_result' %}">Test Your Photo</a></li>
+          <li><a href="{% url 'gallery' %}">Mood Gallery</a></li>
+          <li><a href="{% url 'login' %}">Login</a></li>
+          <li><a  href="{% url 'signup' %}">SignUp</a></li>
+        </ul>
+        {% endif %}
+      </div>
+    </nav>
+  </header>
+
+  <body>
+    <!-- <h1><a href="{{'/'}}">CatCollectr</a></h1> -->
+
+    {% block content %}
+    {% endblock %}
+
+    <footer>
+      All Rights Reserved, CatCollectr 2017
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js" type="text/javascript"></script>
+
+    <!-- Slick.io script for carousel -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- Materialize script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+    <script src="{% static 'chart.js' %}"></script>
+    <script src="{% static 'app.js' %}"></script>
+
+  </body>
+</html>

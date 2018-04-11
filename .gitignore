@@ -1,0 +1,14 @@
+*.pyc
+.DS_Store
+
+main_app/__pychache__
+
+catcollectr/__pychache__
+
+node_modules
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+Dockerfile

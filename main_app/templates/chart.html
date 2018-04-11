@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+	<h3>
+		{{ graph_labels }}
+		{{ graph_values }}
+	</h3>
+	
+ <canvas id="myChart" width="400" height="400"></canvas>
+	<script> 
+		labels ={{graph_labels|safe}}
+        values ={{graph_values|safe}}
+    </script>
+
+{% endblock %}
