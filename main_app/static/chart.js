@@ -2,7 +2,7 @@
 
 
 color_dictionary = [
-    
+
     "#F0D5E3",
     "#7571A1",
     "#FFE46B",
@@ -12,7 +12,7 @@ color_dictionary = [
     "#BDFFE1",
     "#98C2D9",
     "#F5B23E",
-    "#6A8AC0", 
+    "#6A8AC0",
     "#959EA8",
     "#E89BC6",
     "#C5BDEF",
@@ -118,12 +118,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 })
-
-
-
-
-
-
-
-
-

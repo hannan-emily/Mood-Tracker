@@ -52,12 +52,38 @@
 
   <!-- sample charts using sample data -->
   <div class="row">
-
+  	<div class="col s1"></div>
+  	<div class="col s4">
+  		 <canvas id="samplePieChart" width="400" height="400"></canvas>
+  	</div>
+  	<div class="col s1"></div>
+  	<div class="col s4">
+  		<canvas id="sampleBarChart" width="400" height="400"></canvas>
+  	</div>
+  	<div class="col s1"></div>
   </div>
 
   <!-- sample gallery of images -->
   <div class="row">
+    <div class="col s12">
 
+      <div class="col s3 individual-slide">
+        <div class="index-overlay">
+          <img class="responsive-img" src="../static/img/calm.jpg" alt="calm" />
+          <div class="col s12 slide-text">
+            <h3> CALM </h3>
+            <img class="slide-emoji" src="../static/img/icon-calm.png" alt=""/>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s3">
+      </div>
+
+      <div class="col s3">
+      </div>
+
+    </div>
   </div>
 
 
@@ -66,6 +92,9 @@
 
 
 
-
+<script>
+	labels ={{graph_labels|safe}}
+    values ={{graph_values|safe}}
+</script>
 
 {% endblock %}

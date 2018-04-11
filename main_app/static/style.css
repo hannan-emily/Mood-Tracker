@@ -301,3 +301,20 @@ button.slick-next:before, button.slick-prev:before {
 	display: inline;
 	font-size: 1.5em;
 }
+
+.index-overlay {
+	height: 100% !important;
+	width: 100% !important;
+	background-color: white;
+	opacity: 0.4;
+	position: relative;
+	z-index: 20;
+}
+
+.index-overlay-text {
+	position: relative;
+	z-index: 100;
+	top: 50%;
+	font-size: 2.5em;
+	text-align: center !important;
+}
