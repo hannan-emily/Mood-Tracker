@@ -32,27 +32,7 @@ BUCKET_NAME = 'chelsea-motion-detector'
 S3_BUCKET = 's3://{}/'.format(BUCKET_NAME)
 
 def index(request):
-    # context = {'cats': cats}
-    cats = Cat.objects.all()
-    form = CatForm()
-    return render(request, 'index.html', {'cats': cats, 'form': form})
-
-
-def show(request, cat_id):
-    cat = Cat.objects.get(id=cat_id)
-    form = ToyForm()
-    return render(request, 'show.html', {'cat': cat, 'form': form})
-
-
-# now that our model dictates our form we can write less code in our post route
-def post_cat(request):
-    form = CatForm(request.POST)
-    if form.is_valid:
-        cat = form.save(commit=False)
-    cat.user = request.user
-    cat.save()
-    return HttpResponseRedirect('/')
-
+    return render(request, 'index.html')
 
 def profile(request, username):
     user = User.objects.get(username=username)
@@ -91,6 +71,8 @@ def login_view(request):
                     print("The account has been disabled.")
             else:
                 print("The username and/or password is incorrect.")
+                return HttpResponseRedirect('/')
+                
     else:
         form = LoginForm()
         return render(request, 'login.html', {'form': form})
@@ -100,59 +82,6 @@ def logout_view(request):
     logout(request)
     return HttpResponseRedirect('/')
 
-
-def like_cat(request):
-    cat_id = request.GET.get('cat_id', None)
-    likes = 0
-    if (cat_id):
-        cat = Cat.objects.get(id=int(cat_id))
-        if cat is not None:
-            likes = cat.likes + 1
-            cat.likes = likes
-            cat.save()
-    return HttpResponse(likes)
-
-
-def edit_cat(request, cat_id):
-    instance = get_object_or_404(Cat, id=cat_id)
-    form = CatForm(request.POST or None, instance=instance)
-    if form.is_valid():
-        form.save()
-        return redirect('show', cat_id)
-    return render(request, 'edit_cat.html', {'cat': instance, 'form': form})
-
-# django doesn't have a built-in method for delete
-# pk = primary key
-
-
-def delete_cat(request, cat_id):
-    if request.method == 'POST':
-        instance = Cat.objects.get(pk=cat_id)
-        instance.delete()
-        return redirect('index')
-
-
-def create_toy(request, cat_id):
-    form = ToyForm(request.POST)
-    if form.is_valid():
-        try:
-            toy = Toy.objects.get(name=form.data.get('name'))
-        except:
-            toy = None
-        if toy is None:
-            toy = form.save()
-    # this is basically a find-or-create
-        cat = Cat.objects.get(pk=cat_id)
-        toy.cats.add(cat)
-        return redirect('show_toy', toy.id)
-    else:
-        return redirect('show', cat_id)
-
-
-def show_toy(request, toy_id):
-    toy = Toy.objects.get(pk=toy_id)
-    cats = toy.cats.all()
-    return render(request, 'show_toy.html', {'toy': toy, 'cats': cats})
 
 
 def api(request):

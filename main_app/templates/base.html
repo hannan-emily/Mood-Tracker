@@ -30,7 +30,7 @@
       <div class="nav-wrapper">
         {% if user.is_authenticated %}
         <ul id="nav-mobile" class="hide-on-med-and-down">
-          <li><a  href="{% url 'profile' user.username %}">Hello, {{ user.username }}!</a></li>
+          <li><a  href="{% url 'gallery' %}">Hello, {{ user.username }}!</a></li>
           <li><a href="{% url 'motion_result' %}">Test Your Photo</a></li>
           <li><a href="{% url 'gallery' %}">Mood Gallery</a></li>
           <li><a href="{% url 'sample' %}">Sample Tracker</a></li>
