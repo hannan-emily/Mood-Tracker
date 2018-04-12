@@ -106,10 +106,10 @@ a {
 
 /* styling for index.html */
 .index-row {
-	height: 85vh !important;
+	height: 100vh !important;
 	margin: 0 auto;
 	padding: 0;
-	overflow-y: hidden;
+	/* overflow-y: hidden; */
 	position: relative;
 	text-align: center;
 }
@@ -319,6 +319,7 @@ button.slick-next:before, button.slick-prev:before {
 .inline-header {
 	display: inline;
 	font-size: 1.5em;
+	height: 100%;
 }
 
 .index-overlay {
