@@ -32,6 +32,12 @@ nav a {
 	font-weight: 400;
 }
 
+#nav-mobile li a {
+  margin: 0 !important;
+	padding: 6px !important;
+	font-size: 0.7em;
+}
+
 h1 {
 	font-family: 'Playfair Display', serif !important;
 	font-weight: 700 !important;
@@ -147,6 +153,11 @@ a {
 	margin: 0 0 1% 0;
 }
 
+.div-spacer-bottom-2 {
+	height: 20px;
+	margin-top: 10%;
+}
+
 .button-submit {
 	background-color: #F5B23E;
 	border: none;
@@ -162,6 +173,9 @@ label {
 	color: black;
 }
 
+
+
+
 /* ////////// end of global styling //////// */
 
 
@@ -170,9 +184,10 @@ label {
 	height: 100vh !important;
 	margin: 0 auto;
 	padding: 0;
-	/* overflow-y: hidden; */
+
 	position: relative;
 	text-align: center;
+
 }
 
 .index-row-text {
@@ -255,10 +270,14 @@ label {
 
 /* form that uploads user image, includes "upload button" */
 .image-form {
-	/* z-index: 100; */
-	/* position: absolute; */
 	text-align: center !important;
 	display: inline-block;
+}
+
+#form > p {
+	text-align: center !important;
+	margin: 2% 0 2% 0;
+	height: 100%;
 }
 
 /* styling for slick image carousel */
@@ -444,16 +463,39 @@ button.slick-next:before, button.slick-prev:before {
 }
 
 .about-row {
-	height: 400px;
 	margin: 2% 0 2% 0;
 }
 
 .about-img {
-	object-fit: contain;
+	object-fit: cover;
 	height: 300px;
 	width: auto;
+
+}
+
+.about-overflow {
+	overflow-x: hidden;
 }
 
 .about-icon {
 	color: #F9DD33;
+}
+
+
+/* //////// styling login and signup pages //////// */
+
+.login-row {
+	height: 100vh;
+	overflow-y: hidden;
+}
+
+#btn-signup {
+padding-top: 1.5% !important;
+}
+
+/* //////// styling signup page //////// */
+
+#form-signup {
+	font-size: 0.9em;
+	line-height: 0.8em;
 }

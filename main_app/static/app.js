@@ -15,7 +15,10 @@ $('.like').on('click', function(event){
 
 
 
+
 $(document).ready(function(){
+
+  $(".dropdown-trigger").dropdown();
 
   $('.responsive').slick({
   dots: true,

@@ -8,25 +8,41 @@
       <div class="row image-form-parent">
         <div class="col s12 image-form">
           <h1 class="about-header-text-h1 inline">Upload Image to Analyze Mood</h1>
-          <form method="post" id="emily" enctype='multipart/form-data'>
-           	 {% csrf_token %}
-           	   <div>{{ form.as_p }}</div>
-            <button class="button-submit" type="submit">Upload</button>
-          </form>
+
+          <div class="row">
+          <div class="col s12 m6 push-m3">
+            <form method="post" id="emily" enctype='multipart/form-data'>
+             	 {% csrf_token %}
+             	  <div id="form">{{ form.as_p }}</div>
+              <button class="button-submit" type="submit">Upload</button>
+            </form>
+          </div>
+        </div>
+
         </div>
       </div>
 
       <div class="col s12">
+
         <div class="col s12 m4 placeholder">
           {% if result != 'Unknown' %}
-            <div id="ItemPreview" class="slide-text">
-              <h2>Your photo's Mood Tracker Score:<h2>
-              <h2>{{ result }}</h2>
+            <div class="row">
+              <h2 class="h2-quote flow-text">Your Mood Tracker<h2>
+              <h2 class="h2-quote flow-text"> Score:</h2>
+            </div>
+            <div class="row">
+              <div class="sample-emoji-header">
+                <h4><img class="slide-emoji-tiny" src="../static/img/icon-{{ result }}.png" alt=""/>&nbsp;&nbsp;{{result}}</h4>
+              </div>
+            </div>
+            <div class="col s6 push-s3">
+              <a class="btn-large" href="{% url 'gallery' %}">Visit Tracker</a>
             </div>
           {% else %}
             <img class="responsive-image placeholder-img" src="../static/img/woman02.jpg" alt="woman2" />
           {% endif %}
         </div>
+
 
         <div class="col s12 m4 image-upload-parent placeholder">
           {% if img %}

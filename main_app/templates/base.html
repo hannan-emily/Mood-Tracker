@@ -30,8 +30,7 @@
     <nav class="nav-center">
       <div class="nav-wrapper">
         {% if user.is_authenticated %}
-        <ul id="nav-mobile" class="hide-on-med-and-down">
-
+        <ul id="" class="hide-on-med-and-down">
           <li><a href="{% url 'index' %}">Home</a></li>
           <li><a href="{% url 'sample' %}">How It Works</a></li>
           <li><a href="{% url 'motion_result' %}">Analyze Photo</a></li>
@@ -39,15 +38,24 @@
           <li><a href="{% url 'about' %}">About</a></li>
           <li><a href="{% url 'logout' %}">Logout: {{ user.username }}</a></li>
         </ul>
+
+        <ul id="nav-mobile" class="hide-on-large-only flow-text">
+          <li class="flow-text"><a href="{% url 'index' %}">Home</a></li>
+          <li class="flow-text"><a href="{% url 'sample' %}">How</a></li>
+          <li class="flow-text"><a href="{% url 'motion_result' %}">Analyze</a></li>
+          <li class="flow-text"><a href="{% url 'gallery' %}">Tracker</a></li>
+          <li class="flow-text"><a href="{% url 'about' %}">About</a></li>
+          <li class="flow-text"><a href="{% url 'logout' %}">Logout</a></li>
+        </ul>
         {% else %}
-        <ul id="nav-mobile" class="hide-on-med-and-down">
+        <ul id="" class="hide-on-small-only">
           <li><a href="{% url 'index' %}">Home</a></li>
           <li><a href="{% url 'sample' %}">How It Works</a></li>
           <li><a href="{% url 'about' %}">About</a></li>
           <li><a href="{% url 'login' %}">Login</a></li>
           <li><a  href="{% url 'signup' %}">Sign Up</a></li>
-
         </ul>
+
         {% endif %}
       </div>
     </nav>
