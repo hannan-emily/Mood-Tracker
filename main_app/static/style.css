@@ -381,3 +381,28 @@ button.slick-next:before, button.slick-prev:before {
 	display: inline-block;
 	margin: 5% 0 0 0;
 }
+
+
+/* styling for about.html */
+.about-header-text-h1 {
+	font-family: 'Playfair Display', serif !important;
+	font-weight: 700 !important;
+	font-size: 2.5em;
+}
+
+.about-header-text-h2 {
+	font-family: 'Playfair Display', serif !important;
+	font-weight: 400 !important;
+	font-size: 2.5em;
+}
+
+.about-row {
+	height: 400px;
+	margin: 2% 0 2% 0;
+}
+
+.about-img {
+	object-fit: contain;
+	height: 300px;
+	width: auto;
+}
