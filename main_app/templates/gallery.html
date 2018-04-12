@@ -3,67 +3,97 @@
 
 {% block content %}
 
-  <div class="row ">
+  <div class="row">
 
-    <div class="col s12">
-      <h2>Your Gallery</h2>
-    </div>
-
-    <div class="row">
-    	<div class="col s1"></div>
-    	<div class="col s4">
-    		 <canvas id="pieChart" width="400" height="400"></canvas>
-    	</div>
-    	<div class="col s1"></div>
-    	<div class="col s4">
-    		<canvas id="barChart" width="400" height="400"></canvas>
-    	</div>
-    	<div class="col s1"></div>
-    </div>
-
-
-
-
-    <div class="col offset-s1 s10">
-      <div class="responsive slide-parent">
-
-      {% for picture in pictures %}
-        <div class='col s12 slide individual-slide'>
-
-          <div class="individual-overlay"></div>
-            <img class="responsive-image" src="{{picture.img}}" alt=""/>
-            <div class="col s12 slide-text">
-              <h3> {{ picture.mood }} </h3>
-              {% if picture.mood == 'HAPPY' %}
-              <img class="slide-emoji" src="../static/img/icon-happy.png" alt=""/>
-              {% elif picture.mood == 'SAD' %}
-                <img class="slide-emoji" src="../static/img/icon-sad.png" alt=""/>
-              {% elif picture.mood == 'ANGRY' %}
-                <img class="slide-emoji" src="../static/img/icon-angry.png" alt=""/>
-              {% elif picture.mood == 'CONFUSED' %}
-                <img class="slide-emoji" src="../static/img/icon-confused.png" alt=""/>
-              {% elif picture.mood == 'DISGUSTED' %}
-                <img class="slide-emoji" src="../static/img/icon-disgusted.png" alt=""/>
-              {% elif picture.mood == 'SURPRISED' %}
-                <img class="slide-emoji" src="../static/img/icon-surprised.png" alt=""/>
-              {% elif picture.mood == 'CALM' %}
-                <img class="slide-emoji" src="../static/img/icon-calm.png" alt=""/>
-              {% else %}
-                <div><div>
-              {% endif %}
-            </div>
-        </div>
-
-
-      {% endfor%}
-
+    <!-- header title for tablet and larger screens -->
+    <div class="row sample-header">
+      <div class="col m12 center hide-on-small-only">
+          <h2 class="sample-header-text-h2 inline">your mood</h2>
+          <h1 class="sample-header-text-h1 inline">tracker</h1>
       </div>
     </div>
-  </div>
 
-  <script>
-    labels ={{graph_labels|safe}}
-      values ={{graph_values|safe}}
-  </script>
+    <!-- header title for mobile screens -->
+    <div class="col s12 center hide-on-med-and-up">
+      <h2 class="index-row-text-small">your mood</h2><h1 class="index-row-text-small-h1">tracker</h1>
+    </div>
+
+    <!-- user responsive charts -->
+    <div class="row">
+      <div class="col l1 hide-on-med-and-down"></div>
+
+      <div class="col s12 l4">
+    		 <canvas id="pieChart" width="400" height="400"></canvas>
+    	</div>
+
+      <div class="col s12 l1"></div>
+
+      <div class="col s12 l4">
+    		<canvas id="barChart" width="400" height="400"></canvas>
+    	</div>
+
+      <div class="col l1 hide-on-med-and-down"></div>
+    </div>
+
+    <!-- encourage users to upload more photos to add to database -->
+    <!-- responsive call to action button for tablet and larger screens -->
+    <div class="col m12 hide-on-small-only center">
+      <a class="btn-large" href="{% url 'motion_result' %}">Analyze More Photos</a>
+    </div>
+
+    <!-- responsive call to action button for mobile screens -->
+    <div class="col s12 hide-on-med-and-up center">
+      <a class="btn-large" href="{% url 'motion_result' %}">Analyze More</a>
+    </div>
+
+
+    <!-- user gallery of images with text & emojis -->
+    <div class="row sample-header">
+      <div class="col s12 center">
+        <h2>Your Analyzed Photo Gallery</h2>
+      </div>
+    </div>
+
+
+      <div class="col s10 push-s1">
+        <div class="responsive">
+
+        {% for picture in pictures %}
+          <div class='col s12 individual-slide'>
+              <div class="individual-overlay"></div>
+              <img class="responsive-image col s12" src="{{picture.img}}" alt=""/>
+              <div class="col s12 slide-text">
+                <h3> {{ picture.mood }} </h3>
+                {% if picture.mood == 'HAPPY' %}
+                <img class="slide-emoji" src="../static/img/icon-happy.png" alt=""/>
+                {% elif picture.mood == 'SAD' %}
+                  <img class="slide-emoji" src="../static/img/icon-sad.png" alt=""/>
+                {% elif picture.mood == 'ANGRY' %}
+                  <img class="slide-emoji" src="../static/img/icon-angry.png" alt=""/>
+                {% elif picture.mood == 'CONFUSED' %}
+                  <img class="slide-emoji" src="../static/img/icon-confused.png" alt=""/>
+                {% elif picture.mood == 'DISGUSTED' %}
+                  <img class="slide-emoji" src="../static/img/icon-disgusted.png" alt=""/>
+                {% elif picture.mood == 'SURPRISED' %}
+                  <img class="slide-emoji" src="../static/img/icon-surprised.png" alt=""/>
+                {% elif picture.mood == 'CALM' %}
+                  <img class="slide-emoji" src="../static/img/icon-calm.png" alt=""/>
+                {% else %}
+                  <div></div>
+                {% endif %}
+              </div>
+          </div>
+
+        {% endfor%}
+        </div>
+      </div>
+
+
+</div>
+
+<script>
+  labels ={{graph_labels|safe}}
+    values ={{graph_values|safe}}
+</script>
 
 {% endblock %}
