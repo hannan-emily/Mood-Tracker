@@ -5,13 +5,15 @@
 
   <div class="row image-upload-row">
 
-      <div class="col s12 image-form">
-          <h5>Upload Image to Calculate Mood</h5>
+      <div class="row image-form-parent">
+        <div class="col s12 image-form">
+          <h1 class="about-header-text-h1 inline">Upload Image to Analyze Mood</h1>
           <form method="post" id="emily" enctype='multipart/form-data'>
            	 {% csrf_token %}
            	   <div>{{ form.as_p }}</div>
-            <button class="submit-button" type="submit">Upload</button>
+            <button class="button-submit" type="submit">Upload</button>
           </form>
+        </div>
       </div>
 
       <div class="col s12">
@@ -22,7 +24,7 @@
               <h2>{{ result }}</h2>
             </div>
           {% else %}
-            <img class="responsive-image placeholder-img" src="../static/img/woman02.jpg" alt="woman" />
+            <img class="responsive-image placeholder-img" src="../static/img/woman02.jpg" alt="woman2" />
           {% endif %}
         </div>
 
@@ -30,27 +32,91 @@
           {% if img %}
             <img class="responsive-image placeholder-img" src="{{img}}" />
           {% else %}
-            <img class="responsive-image placeholder-img" src="../static/img/woman01.jpg" alt="woman" />
+            <img class="responsive-image placeholder-img" src="../static/img/woman01.jpg" alt="woman1" />
           {% endif %}
         </div>
 
         <div class="col s12 m4 placeholder">
           {% if result == 'HAPPY' %}
-            <img class="responsive-image placeholder-img " src="../static/img/happy.jpg" alt="woman" />
+          <div class="individual-slide center">
+            <div class="col s12 index-overlay-text">
+              <h3 class="flow-text">HAPPY</h3>
+              <img class="slide-emoji" src="../static/img/icon-happy.png" alt=""/>
+            </div>
+            <div class="index-overlay">
+              <img class="responsive-image  placeholder-img" src="../static/img/happy.jpg" alt="" />
+            </div>
+          </div>
           {% elif result == 'SAD' %}
-            <img class="responsive-image placeholder-img" src="../static/img/sad.jpg" alt="woman" />
+          <div class="individual-slide center">
+            <div class="col s12 index-overlay-text">
+              <h3 class="flow-text">SAD</h3>
+              <img class="slide-emoji" src="../static/img/icon-sad.png" alt=""/>
+            </div>
+            <div class="index-overlay">
+              <img class="responsive-image  placeholder-img" src="../static/img/sad.jpg" alt="" />
+            </div>
+          </div>
           {% elif result == 'ANGRY' %}
-            <img class="responsive-image placeholder-img" src="../static/img/angry.jpg" alt="woman" />
+          <div class="individual-slide center">
+            <div class="col s12 index-overlay-text">
+              <h3 class="flow-text">ANGRY</h3>
+              <img class="slide-emoji" src="../static/img/icon-angry.png" alt=""/>
+            </div>
+            <div class="index-overlay">
+              <img class="responsive-image  placeholder-img" src="../static/img/angry.jpg" alt="" />
+            </div>
+          </div>
           {% elif result == 'CONFUSED' %}
-            <img class="responsive-image  placeholder-img" src="../static/img/confused.jpg" alt="woman" />
+          <div class="individual-slide center">
+            <div class="col s12 index-overlay-text">
+              <h3 class="flow-text">CONFUSED</h3>
+              <img class="slide-emoji" src="../static/img/icon-confused.png" alt=""/>
+            </div>
+            <div class="index-overlay">
+              <img class="responsive-image  placeholder-img" src="../static/img/confused.jpg" alt="" />
+            </div>
+          </div>
           {% elif result == 'DISGUSTED' %}
-            <img class="responsive-image placeholder-img" src="../static/img/disgusted.jpg" alt="woman" />
+            <div class="individual-slide center">
+              <div class="col s12 index-overlay-text">
+                <h3 class="flow-text">DISGUSTED</h3>
+                <img class="slide-emoji" src="../static/img/icon-disgusted.png" alt=""/>
+              </div>
+              <div class="index-overlay">
+                <img class="responsive-image  placeholder-img" src="../static/img/disgusted.jpg" alt="" />
+              </div>
+            </div>
           {% elif result == 'SURPRISED' %}
-            <img class="responsive-image  placeholder-img" src="../static/img/surprised.jpg" alt="woman" />
+            <div class="individual-slide center">
+              <div class="col s12 index-overlay-text">
+                <h3 class="flow-text">SURPRISED</h3>
+                <img class="slide-emoji" src="../static/img/icon-surprised.png" alt=""/>
+              </div>
+              <div class="index-overlay">
+                <img class="responsive-image  placeholder-img" src="../static/img/surprised.jpg" alt="" />
+              </div>
+            </div>
           {% elif result == 'CALM' %}
-            <img class="responsive-image placeholder-img" src="../static/img/calm.jpg" alt="woman" />
+            <div class="individual-slide center">
+              <div class="col s12 index-overlay-text">
+                <h3 class="flow-text">CALM</h3>
+                <img class="slide-emoji" src="../static/img/icon-calm.png" alt=""/>
+              </div>
+              <div class="index-overlay">
+                <img class="responsive-image placeholder-img" src="../static/img/calm.jpg" alt="" />
+              </div>
+            </div>
           {% else %}
-            <img class="responsive-image placeholder-img" src="../static/img/woman03.jpg" alt="woman" />
+            <div class="individual-slide center">
+              <div class="col s12 index-overlay-text">
+                <h3 class="flow-text">UPLOAD PHOTO FOR RESULTS</h3>
+                <img class="slide-emoji" src="../static/img/icon-happy.png" alt=""/>
+              </div>
+              <div class="index-overlay">
+                <img class="responsive-image placeholder-img" src="../static/img/woman03.jpg" alt="woman3" />
+              </div>
+            </div>
           {% endif %}
         </div>
       </div>

@@ -147,15 +147,25 @@ a {
 	margin: 0 0 1% 0;
 }
 
-.div-spacer {
-	height: 1px;
-	margin: 1% 0 1% 0;
+.button-submit {
+	background-color: #F5B23E;
+	border: none;
+	color: black;
+	box-shadow: none;
+	padding: 1em 2em 1em 2em;
+}
+
+label {
+	font-family: 'Work Sans', sans-serif !important;
+	font-weight: 400;
+	font-size: 1em;
+	color: black;
 }
 
 /* ////////// end of global styling //////// */
 
 
-/* styling for index.html */
+/* ////////////// styling for index.html ////////////// */
 .index-row {
 	height: 100vh !important;
 	margin: 0 auto;
@@ -228,7 +238,7 @@ a {
 .index-a {
 	color: #FF534B;
 }
-/* styling for motion_result.html */
+/* ////////////// styling for motion_result.html ////////////// */
 
 /* parent column that holds the image upload elements */
 .image-upload-parent {
@@ -236,6 +246,11 @@ a {
 	z-index: 1;
 	text-align: center;
 	width: 100%;
+}
+
+.image-form-parent {
+	margin: 2em;
+	height: 100%;
 }
 
 /* form that uploads user image, includes "upload button" */
@@ -327,7 +342,7 @@ button.slick-next:before, button.slick-prev:before {
 	display: inline-block;
 }
 
-/* styling for motion_default.html */
+/* ////////////// styling for motion_default.html ////////////// */
 
 .placeholder {
 	height: 500px;
@@ -347,7 +362,7 @@ button.slick-next:before, button.slick-prev:before {
 	z-index: 100;
 }
 
-/* styling for sample page */
+/* ////////////// styling for sample page ////////////// */
 .sample-header {
 	margin: 1% 0 2% 0;
 	height: 100%;
@@ -415,7 +430,7 @@ button.slick-next:before, button.slick-prev:before {
 }
 
 
-/* styling for about.html */
+/* ////////////// styling for about.html ////////////// */
 .about-header-text-h1 {
 	font-family: 'Playfair Display', serif !important;
 	font-weight: 700 !important;
