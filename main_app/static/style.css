@@ -421,3 +421,7 @@ button.slick-next:before, button.slick-prev:before {
 	height: 300px;
 	width: auto;
 }
+
+.about-icon {
+	color: #F9DD33;
+}
