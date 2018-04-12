@@ -68,7 +68,7 @@ def login_view(request):
                 # return HttpResponseRedirect('/')
                 form = LoginForm()
                 return render(request, 'login.html', {'form': form, 'msg': 'Incorrect credentials, please try again.'})
-                
+
     else:
         form = LoginForm()
         return render(request, 'login.html', {'form': form, 'msg': ''})
@@ -118,11 +118,11 @@ def motion_result(request):
                 print(error)
                 mood = "Unknown"
             #save the info about this picture to DB
-            
+
             return render(request, 'motion_result.html',
                       {'result': str(mood), 'form': form,
                        'img': img_encoding})
-    
+
 
 
     # if this is a get request, show the picture upload form
@@ -184,7 +184,22 @@ def gallery(request):
                 "img": picture_object.name
             })
 
-        return render(request, 'gallery.html', {'pictures': image_array})
+        if str(request.user) == 'AnonymousUser':
+            return redirect('/login')
+        else:
+            picture_records = Picture.objects.filter(user=request.user)
+            mood_array = []
+            for picture_object in picture_records:
+                mood_array.append(picture_object.mood)
+            unique_mood = list(set(mood_array))
+            dd = {}
+            for mood in unique_mood:
+                dd[mood] = mood_array.count(mood)
+
+        return render(request, 'gallery.html', {'pictures': image_array, 'graph_labels': list(dd.keys()), 'graph_values': list(dd.values())})
+
+
+
 
 def sample(request):
     return render(request, 'sample.html')

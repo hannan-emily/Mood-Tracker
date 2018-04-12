@@ -9,6 +9,21 @@
       <h2>Your Gallery</h2>
     </div>
 
+    <div class="row">
+    	<div class="col s1"></div>
+    	<div class="col s4">
+    		 <canvas id="pieChart" width="400" height="400"></canvas>
+    	</div>
+    	<div class="col s1"></div>
+    	<div class="col s4">
+    		<canvas id="barChart" width="400" height="400"></canvas>
+    	</div>
+    	<div class="col s1"></div>
+    </div>
+
+
+
+
     <div class="col offset-s1 s10">
       <div class="responsive slide-parent">
 
@@ -38,12 +53,17 @@
               {% endif %}
             </div>
         </div>
-        
+
 
       {% endfor%}
 
       </div>
     </div>
   </div>
+
+  <script>
+    labels ={{graph_labels|safe}}
+      values ={{graph_values|safe}}
+  </script>
 
 {% endblock %}
