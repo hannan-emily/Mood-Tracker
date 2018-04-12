@@ -3,10 +3,14 @@
 
 {% block content %}
 <h1>Login</h1>
+<h5> {{ msg }} </h5>
 <form method="POST" action=".">
   {% csrf_token %}
   {{ form.as_p}}
   <input type="submit" value="Submit" />
 </form>
 
+<h1><a href="{% url 'signup' %}"> Or Sign Up Here</a></h1>
+
 {% endblock %}
+ß
