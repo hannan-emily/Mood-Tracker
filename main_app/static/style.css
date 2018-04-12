@@ -1,3 +1,6 @@
+
+/* ////////// start of global styling //////// */
+
 body {
 	margin: 0;
 	padding: 0;
@@ -97,12 +100,26 @@ a {
 	height: 100%;
 }
 
-
-/* global materialize class */
 .responsive-img {
 	margin: 0;
 	padding: 0;
 }
+
+.btn, .btn-flat, .btn-large {
+  background-color: #F5B23E;
+  border: none;
+  color: black;
+  box-shadow: none;
+  padding-bottom: 2.5em;
+  margin: 2em 1em 2em 1em;
+}
+
+.btn:hover, .btn-large:hover, .btn-small:hover {
+  background-color: #FFE46B !important;
+}
+
+/* ////////// end of global styling //////// */
+
 
 /* styling for index.html */
 .index-row {
@@ -273,6 +290,12 @@ button.slick-next:before, button.slick-prev:before {
 	margin: 0 auto;
 }
 
+.slide-emoji-tiny {
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+}
+
 /* styling for motion_default.html */
 
 .placeholder {
@@ -309,6 +332,11 @@ button.slick-next:before, button.slick-prev:before {
 	font-family: 'Playfair Display', serif !important;
 	font-weight: 400 !important;
 	font-size: 5em;
+}
+
+.sample-emoji-header {
+	margin: 2% 0 2% 0%;
+	height: 100%;
 }
 
 .inline {

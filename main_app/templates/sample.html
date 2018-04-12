@@ -61,25 +61,57 @@
       <img class="responsive-image" src="../static/img/cover-jessica-smile.jpg" alt="jessica-smile" />
     </div>
 
-    <div class="col s12 m5">
-      <h2 class="h2-quote">This photo's Mood Tracker Score:</h2>
-      <h2>HAPPY	&nbsp;&nbsp;<img class="slide-emoji" src="../static/img/icon-happy.png" alt=""/></h2>
+    <div class="col s12 m6">
+      <h2 class="h2-quote">Your Mood Tracker Score:</h2>
+      <h2><img class="slide-emoji" src="../static/img/icon-happy.png" alt=""/>&nbsp;&nbsp;HAPPY</h2>
+      <p>During facial recognition anaylsis, your photo can be classified as 1 of 7 emotions:</p>
 
-      <p>explanation of what the Amazon Reckognition API is doing, what data is returned,
-        how it calculaes the mood score, how we upload/download</p>
+      <div class="col s12">
+        <div class="col s6">
+          <div class="sample-emoji-header">
+            <h4><img class="slide-emoji-tiny" src="../static/img/icon-calm.png" alt=""/>&nbsp;&nbsp;Calm</h4>
+          </div>
+          <div class="sample-emoji-header">
+            <h4><img class="slide-emoji-tiny" src="../static/img/icon-happy.png" alt=""/>&nbsp;&nbsp;Happy</h4>
+          </div>
+          <div class="sample-emoji-header">
+            <h4><img class="slide-emoji-tiny" src="../static/img/icon-surprised.png" alt=""/>&nbsp;&nbsp;Surprised</h4>
+          </div>
+          <div class="sample-emoji-header">
+            <h4><img class="slide-emoji-tiny" src="../static/img/icon-angry.png" alt=""/>&nbsp;&nbsp;Angry</h4>
+          </div>
+        </div>
 
-      <a class="btn" href="{% url 'motion_result' %}">Start Your Tracker</a>
+        <div class="col s6">
+          <div class="sample-emoji-header">
+            <h4><img class="slide-emoji-tiny" src="../static/img/icon-confused.png" alt=""/>&nbsp;&nbsp;Confused</h4>
+          </div>
+          <div class="sample-emoji-header">
+            <h4><img class="slide-emoji-tiny" src="../static/img/icon-sad.png" alt=""/>&nbsp;&nbsp;Sad</h4>
+          </div>
+          <div class="sample-emoji-header">
+            <h4><img class="slide-emoji-tiny" src="../static/img/icon-disgusted.png" alt=""/>&nbsp;&nbsp;Disgusted</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col m6 push-m3 hide-on-small-only">
+        <a class="btn-large" href="{% url 'motion_result' %}">Start Mood Tracker</a>
+      </div>
+
+      <div class="col s6 push-s3 hide-on-med-and-up">
+        <a class="btn-large" href="{% url 'motion_result' %}">Start Tracker</a>
+      </div>
 
     </div>
   </div>
 
+
   <div class="row row-grey">
     <div class="col s8 push-s2 center">
-
       <h5 class="inline"> PHOTO. ANALYZED. <h4 class="inline">MOOD TRACKER.</h4></h5>
       <h2 class="h2-quote">"I am big enough to admit that I am often inspired by myself."
       - Leslie Knope, Parks & Rec</h2>
-
     </div>
   </div>
 
