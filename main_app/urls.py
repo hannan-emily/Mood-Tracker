@@ -16,4 +16,5 @@ urlpatterns = [
 	path('chart/', views.chart, name='chart'),
 	path('gallery/', views.gallery, name='gallery'),
 	path('sample/', views.sample, name='sample'),
+	path('about/', views.about, name='about'),
 ]

@@ -7,6 +7,7 @@
 
   <div class="col s12">
 
+
 <!-- link to send user to start their own tracker -->
   <div class="col s12 index-row-text left-align">
     <div class="index-row-subtext-right">
@@ -17,40 +18,63 @@
     </div>
   </div>
 
-  <!-- main title on tablet to desktop -->
+
   <div class="col s12 index-row-text">
     <div class="col m6 right-align hide-on-small-only">
       <h2 class="index-row-text-h2">mood</h2>
     </div>
     <div class="col m6 left-align hide-on-small-only">
       <h1 class="index-row-text-h1">tracker</h1>
-      <h5 class="inline-header">&nbsp;PHOTO. MOOD.<h4 class="inline-header">&nbsp;ANALYZED.</h4></h5>
     </div>
 
   </div>
 
-<!-- title on mobile -->
+<!-- app title on mobile -->
   <div class="col s12 hide-on-med-and-up">
     <h2 class="index-row-text-small">mood</h2><h1 class="index-row-text-small-h1">tracker</h1>
     <br />
-    <h5 class="inline-header">&nbsp;PHOTO. MOOD.<h4 class="inline-header">&nbsp;ANALYZED.</h4></h5>
+    <h4 class="inline-header">&nbsp;PHOTO. MOOD. ANALYZED.</h4>
   </div>
 
-<!-- link to send user to sample / demo page -->
-  <div class="col s6 index-row-text left-align">
-    <div class="index-row-subtext-left">
-      <h4 class="index-row-subtext-header"><a href="{% url 'sample' %}">view jessica's&nbsp;</a></h4>
-      <h5 class="index-row-subtext-header-h5">sample mood tracker</h5>
+<!-- link to send user to start their own tracker on tablet or larger-->
+  <div class="col m12 index-row-text left-align hide-on-small-only">
+    <div class="index-row-subtext-right">
+      <h4 class="index-row-subtext-header-bold"><a class="index-a" href="{% url 'motion_result' %}">start your&nbsp;</a></h4>
+      <h5 class="index-row-subtext-header">mood tracker</h5>
     </div>
   </div>
 
+<!-- link to send user to sample / demo page on tablet or larger -->
+  <div class="col m6 index-row-text left-align hide-on-small-only">
+    <div class="index-row-subtext-left">
+      <h4 class="index-row-subtext-header"><a href="{% url 'sample' %}">view sample&nbsp;</a></h4>
+      <h5 class="index-row-subtext-header-h5">mood tracker</h5>
+    </div>
+  </div>
 
+  <!-- link to send user to sample / demo page on mobile -->
+    <div class="col s6 index-row-text left-align hide-on-med-and-up">
+      <div class="index-row-subtext-left">
+        <h4 class="index-row-subtext-header"><a href="{% url 'sample' %}">view sample&nbsp;</a></h4>
+        <h5 class="index-row-subtext-header-h5">mood tracker</h5>
+      </div>
+    </div>
+
+  <!-- image for sample / demo page -->
   <div class="col s12 m6">
     <img class="responsive-img" src="../static/img/cover-woman.jpg" alt="cover-woman" />
   </div>
 
-
+  <!-- image for user tracker page -->
   <div class="col s12 m6">
+  <!-- link to send user to start their own tracker on mobile -->
+    <div class="col s6 index-row-text left-align hide-on-med-and-up">
+      <div class="index-row-subtext-left">
+        <h4 class="index-row-subtext-header-bold"><a class="index-a" href="{% url 'motion_result' %}">start your&nbsp;</a></h4>
+        <h5 class="index-row-subtext-header">mood tracker</h5>
+      </div>
+    </div>
+
     <img class="responsive-img " src="../static/img/cover-self.jpg" alt="cover-self" />
   </div>
 
