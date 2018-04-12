@@ -37,6 +37,7 @@
           <li><a href="{% url 'gallery' %}">Mood Gallery</a></li>
           <li><a href="{% url 'sample' %}">Sample Tracker</a></li>
           <li><a href="{% url 'logout' %}">Logout</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
         </ul>
         {% else %}
         <ul id="nav-mobile" class="hide-on-med-and-down">
@@ -44,6 +45,7 @@
           <li><a href="{% url 'sample' %}">Sample Tracker</a></li>
           <li><a href="{% url 'login' %}">Login</a></li>
           <li><a  href="{% url 'signup' %}">SignUp</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
         </ul>
         {% endif %}
       </div>
