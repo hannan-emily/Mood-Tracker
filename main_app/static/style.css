@@ -313,8 +313,10 @@ label {
 }
 
 button.slick-next:before, button.slick-prev:before {
-	color: #424242;
+	color: #FF534B;
+
 }
+
 
 
 .individual-slide {
@@ -499,3 +501,6 @@ padding-top: 1.5% !important;
 	font-size: 0.9em;
 	line-height: 0.8em;
 }
+
+
+/* ///////// test ///////////// */

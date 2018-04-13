@@ -51,6 +51,7 @@
     <div class="row sample-header">
       <div class="col s12 center">
         <h2>Your Analyzed Photo Gallery</h2>
+        <h4 class="inline">Click on a photo to delete &nbsp;</h4><h5 class="inline">Scroll using red arrow icons</h5>
       </div>
     </div>
 
@@ -59,9 +60,9 @@
         <div class="responsive">
 
         {% for picture in pictures %}
-          <div class='col s12 individual-slide'>
-              <div class="individual-overlay"></div>
-              <img class="responsive-image col s12" src="{{picture.img}}" alt=""/>
+          <div class='col s12 individual-slide slide'>
+              <div class="individual-overlay slide"></div>
+              <img class="responsive-image slide col s12" src="{{picture.img}}" alt=""/>
               <div class="col s12 slide-text">
                 <h3> {{ picture.mood }} </h3>
                 {% if picture.mood == 'HAPPY' %}
@@ -87,6 +88,7 @@
         {% endfor%}
         </div>
       </div>
+
 
 
 </div>

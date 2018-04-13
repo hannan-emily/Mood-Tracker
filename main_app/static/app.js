@@ -58,5 +58,14 @@ $(document).ready(function(){
 
 
 
+$('.slider').slick({
+  dots: true
+});
+
+$('.slide').on('click', function() {
+  $('.responsive').slick('slickRemove', $('.slick-slide').index(this) - 1)
+});
+
+
 
 });

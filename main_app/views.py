@@ -129,7 +129,7 @@ def motion_result(request):
     return render(request, 'motion_result.html',
                   {'result': "Unknown", 'form': form, 'img': ""})
 
-#-----------------------------------------------chart
+# -----------------------------------------------chart
 from django.views.generic import TemplateView
 from django.contrib.auth.models import User
 

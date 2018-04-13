@@ -51,6 +51,7 @@ The mobile version resembles the web version mostly with minor modification to f
 - Amazon Rekognition Machine Learning API
 - Charts.js
 - AWS (Amazon Web Services)
+- Slick.io responsive image carousels
 - Materialize
 - Javascript
 
