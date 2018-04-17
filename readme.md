@@ -1,7 +1,7 @@
 # Mood Tracker
 
 ## Open the Live App Here:
- Try it [here]().
+Open here: [http://mood-tracker-1.us-west-2.elasticbeanstalk.com/().
 
 ## Powered with Face Recognition Machine Learning.
 Utilizing machine learning for good, we built a personal mood tracking app. Implementing Amazon's Rekognition Machine Learning, and responsive Charts.js data visualization tools, meet your new personal tracker.
@@ -30,19 +30,6 @@ Chart your mood by analyzing your selfies! Using the state-of-the-art Amazon Fac
 
 ### Mobile Version
 The mobile version resembles the web version mostly with minor modification to fit contents on smaller screens. The navigation bar collapses and slides out from the left of the screen once you click on the hamburger icon.
-
-## Wireframes
-#### Main page: wireframe
-![alt text](/client/src/image/wireframe-landing.png "Main")
-
-#### Disasters page: wireframe
-![alt text](/client/src/image/wireframe-disaster.png "Disasters")
-
-#### Event page: wireframe
-![alt text](/client/src/image/wireframe-event.png "Event")
-
-#### User page: wireframe
-![alt text](/client/src/image/wireframe-user.png "User")
 
 
 ## Technology / Library Used
