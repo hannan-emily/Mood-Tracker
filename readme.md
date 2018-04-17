@@ -1,7 +1,7 @@
 # Mood Tracker
 
 ## Open the Live App Here:
-Open here: [http://mood-tracker-1.us-west-2.elasticbeanstalk.com/]().
+ http://mood-tracker-1.us-west-2.elasticbeanstalk.com/
 
 ## Powered with Face Recognition Machine Learning.
 Utilizing machine learning for good, we built a personal mood tracking app. Implementing Amazon's Rekognition Machine Learning, and responsive Charts.js data visualization tools, meet your new personal tracker.
