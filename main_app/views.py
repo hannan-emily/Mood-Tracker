@@ -72,6 +72,7 @@ def logout_view(request):
     logout(request)
     return HttpResponseRedirect('/')
 
+#To reduce the number requests on the server, embed some images (PNG & SVG) as BASE64 directly into the css. 
 def img_base64_encoding(img_bytes):
      return "data:image/png;base64," + base64.encodestring(
         img_bytes).decode("utf-8")
@@ -86,26 +87,23 @@ def motion_result(request):
         if request.method == 'POST':
             # read the uploaded image
             image_bytes = request.FILES['image'].read()
-            # build a connection to s3, permission needed, it will read envirn variables
 
             username = request.user.get_username()
 
-            #UUID4() generates a unique ID with higher security than UUID1()
             img_encoding = img_base64_encoding(image_bytes)
-            # uploading file to bucket 'chelsea-motion-dectector'
             try:
                 rekognition_client = boto3.client('rekognition', region_name='us-west-2')
                 rekoginition_response = rekognition_client.detect_faces(
-                Image={'Bytes': image_bytes},
-                Attributes=['ALL']
+                    Image={'Bytes': image_bytes},
+                    Attributes=['ALL']
                 )
             # Find out the max matching mood from api
                 mood = max(rekoginition_response['FaceDetails'][0]['Emotions'],
                     key=lambda x: x['Confidence'])['Type']
                 new_image_record = Picture.objects.create(
-                user=request.user,
-                mood=str(mood),
-                name= img_encoding
+                    user=request.user,
+                    mood=str(mood),
+                    name= img_encoding
                 )
                 new_image_record.save()
             except Exception as error:
