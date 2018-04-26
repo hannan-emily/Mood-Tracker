@@ -21,16 +21,10 @@ from django.contrib.auth.models import User
 # we add redirect with auth
 from django.contrib.auth import authenticate, login, logout, authenticate
 
-from .forms import CatForm, LoginForm, SignUpForm, ToyForm, UploadPicture
-
-
-
-
-from .models import Cat, Toy, Picture
-
+from .forms import LoginForm, SignUpForm, UploadPicture
+from .models import Picture
 
 def index(request):
-
     return render(request, 'index.html')
 
 def signup(request):
