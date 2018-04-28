@@ -3,19 +3,6 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
 # so we can use our model to dictate our form
-from .models import Cat, Toy
-
-
-class CatForm(forms.ModelForm):
-    class Meta:
-        model = Cat
-        fields = ('name', 'breed', 'description', 'age')
-
-class ToyForm(forms.ModelForm):
-    class Meta:
-        model = Toy
-        fields = ('name',)
-
 
 class LoginForm(forms.Form):
     username = forms.CharField(label="User Name", max_length=64)
